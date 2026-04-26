@@ -32,6 +32,7 @@ Backend: `http://localhost:5000`
 
 - Veritabanı dosyası: `izinler.db` (repo kökü)
 - Backend, `/` endpoint’inde aktif DB yolunu `db_path` alanında döner.
+- göremk isterseniz vscode da extention kısmından SQLite Viewer eklentisinşi indirip  onunla açarsanız kayıtları görebilirsiniz.
 
 Not: “DB boş görünüyor” sorunu genelde yanlış dosyayı açmaktan olur. Daha önce `cd backend` ile çalıştırdıysanız `backend/izinler.db` oluşmuş olabilir.
 
