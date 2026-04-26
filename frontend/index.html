@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personel İzin Sistemi</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <div class="brand">
+        <div class="brand__title">Personel İzin Sistemi</div>
+        <div class="brand__subtitle">İzin talebi • Listeleme • Durum yönetimi</div>
+      </div>
+
+      <div class="api-settings">
+        <label class="label" for="apiBaseUrl">API</label>
+        <input
+          id="apiBaseUrl"
+          class="input input--mono"
+          type="text"
+          placeholder="http://localhost:5000"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="saveApiBaseUrl" class="btn btn--secondary" type="button">Kaydet</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <nav class="tabs" aria-label="Sayfalar">
+        <button class="tab is-active" data-tab="personel" type="button">Personel Ekranı</button>
+        <button class="tab" data-tab="yonetici" type="button">Yönetici Ekranı</button>
+      </nav>
+
+      <section id="view-personel" class="view is-active" aria-labelledby="Personel Ekranı">
+        <div class="card">
+          <h2 class="card__title">İzin Talebi Oluştur</h2>
+          <form id="talepForm" class="grid">
+            <div class="field">
+              <label class="label" for="adSoyad">Ad Soyad</label>
+              <input id="adSoyad" class="input" name="adSoyad" type="text" minlength="2" required />
+            </div>
+
+            <div class="field">
+              <label class="label" for="izinTuru">İzin Türü</label>
+              <select id="izinTuru" class="input" name="izinTuru" required>
+                <option value="Yıllık İzin">Yıllık İzin</option>
+                <option value="Sağlık İzin">Sağlık İzin</option>
+                <option value="Mazaret">Mazaret</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="label" for="baslangicTarihi">Başlangıç Tarihi</label>
+              <input id="baslangicTarihi" class="input" name="baslangicTarihi" type="date" required />
+            </div>
+
+            <div class="field">
+              <label class="label" for="bitisTarihi">Bitiş Tarihi</label>
+              <input id="bitisTarihi" class="input" name="bitisTarihi" type="date" required />
+            </div>
+
+            <div class="field field--full">
+              <label class="label" for="aciklama">Açıklama (opsiyonel)</label>
+              <textarea id="aciklama" class="input" name="aciklama" rows="3"></textarea>
+            </div>
+
+            <div class="actions field--full">
+              <button class="btn" type="submit">Talep Gönder</button>
+              <button id="talepFormReset" class="btn btn--secondary" type="button">Temizle</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2 class="card__title">Son Oluşturulan</h2>
+          <pre id="lastCreated" class="code">Henüz bir talep yok.</pre>
+        </div>
+      </section>
+
+      <section id="view-yonetici" class="view" aria-labelledby="Yönetici Ekranı">
+        <div class="card">
+          <div class="card__row">
+            <h2 class="card__title">İzin Talepleri</h2>
+            <div class="row-actions">
+              <select id="durumFilter" class="input input--compact" aria-label="Durum filtresi">
+                <option value="">Tümü</option>
+                <option value="Bekliyor">Bekliyor</option>
+                <option value="Onaylandı">Onaylandı</option>
+                <option value="Reddedildi">Reddedildi</option>
+              </select>
+              <button id="refreshList" class="btn btn--secondary" type="button">Yenile</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table" aria-label="İzin talepleri tablosu">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Ad Soyad</th>
+                  <th>Tür</th>
+                  <th>Başlangıç</th>
+                  <th>Bitiş</th>
+                  <th>Durum</th>
+                  <th class="th-actions">İşlem</th>
+                </tr>
+              </thead>
+              <tbody id="izinTableBody">
+                <tr>
+                  <td colspan="7" class="muted">Yükleniyor…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__row">
+            <h2 class="card__title">İstatistikler (Ek)</h2>
+            <button id="refreshStats" class="btn btn--secondary" type="button">Yenile</button>
+          </div>
+          <div id="statsGrid" class="stats"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
