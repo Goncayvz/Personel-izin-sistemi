@@ -54,10 +54,13 @@ Sayfanın üst kısmındaki `API` alanına backend adresini yazın (örn. `http:
 - Backend çalışıyor mu? `http://localhost:5000/`
 - Kayıt var mı? `http://localhost:5000/izinler`
 ## Personel ekranı
-  <img width="1532" height="860" alt="WhatsApp Image 2026-04-26 at 18 26 38" src="https://github.com/user-attachments/assets/abcc09a9-6209-473e-bbb9-42ab25de2c5a" />
+<img width="1280" height="822" alt="image" src="https://github.com/user-attachments/assets/cc606860-3b9e-4be8-ad2a-94c99c838e02" />
+
+
   
 ## Yönetici Ekranı
-<img width="1517" height="537" alt="WhatsApp Image 2026-04-26 at 18 26 49" src="https://github.com/user-attachments/assets/9174d525-2efe-45af-8ac4-b89bd21526d6" />
+<img width="1792" height="795" alt="image" src="https://github.com/user-attachments/assets/960bccc9-87aa-4985-bf12-43858ca2b2c4" />
+
 
 
   
