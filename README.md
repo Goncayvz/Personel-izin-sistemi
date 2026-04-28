@@ -91,3 +91,10 @@ Bu değer tarayıcıda `localStorage` içine kaydedilir.
 ### Yönetici Ekranı
 
 <img width="1792" height="795" alt="Yönetici Ekranı" src="https://github.com/user-attachments/assets/960bccc9-87aa-4985-bf12-43858ca2b2c4" />
+
+ ## Çalışma  kaydı
+ 
+https://github.com/user-attachments/assets/c2cba3a9-2dad-417e-8e31-a50c4516cb5b
+
+
+
