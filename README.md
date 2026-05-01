@@ -1,5 +1,14 @@
 ﻿# Personel İzin Sistemi
+ 
+### Personel Ekranı
 
+<img width="1280" height="822" alt="Personel Ekranı" src="https://github.com/user-attachments/assets/cc606860-3b9e-4be8-ad2a-94c99c838e02" />
+
+### Yönetici Ekranı
+
+<img width="1792" height="795" alt="Yönetici Ekranı" src="https://github.com/user-attachments/assets/960bccc9-87aa-4985-bf12-43858ca2b2c4" />
+
+📌 **Bağlam:** Bu proje, teknik bir case çalışmasıdır.
 Bu proje, **FastAPI + SQLite** bir backend ve **statik (vanilla)** bir frontend içerir.
 
 Frontend iki sekmeli mini arayüz sunar:
@@ -82,15 +91,6 @@ Bu değer tarayıcıda `localStorage` içine kaydedilir.
 - Backend çalışıyor mu? `http://localhost:5000/`
 - Kayıt var mı? `http://localhost:5000/izinler`
 
-## Ekran Görüntüleri
-
-### Personel Ekranı
-
-<img width="1280" height="822" alt="Personel Ekranı" src="https://github.com/user-attachments/assets/cc606860-3b9e-4be8-ad2a-94c99c838e02" />
-
-### Yönetici Ekranı
-
-<img width="1792" height="795" alt="Yönetici Ekranı" src="https://github.com/user-attachments/assets/960bccc9-87aa-4985-bf12-43858ca2b2c4" />
 
  ## Çalışma  kaydı
  [video bağlantısı:
